@@ -1,0 +1,146 @@
+SUUNNITELMAT 
+
+TODOT:
+> Etusivulle hieno kuva koko sivulle
+> Otsikko keskelle näkyvästi
+> Nappi erottuvasti ja hienoks
+
+> CSS muotoilut ettei asiat oo tiukasti vasemmassa ylänurkassa
+
+TUNTI 3.5
+
+Kuva näkyy reseptit sivulla (ohjelma lisää tallennettaessa .jpg päätteen)
+Lisäks uuden reseptin lisäyksessä lomake tyhjenee ku lähetetty 
+Reseptit sivulla napilla saa avattu valmistusohjeen
+-> Ei tarvitse tehdä yksittäiselle reseptille sivua!!
+Jee -> Toiminnallisuudet valmista, enää muotoilua ja nätiks kaikki
+
+-
+
+TUNTI 24.4.
+
+ENS KERRALLA: Jatketaan kuvan tallennusta, kuvan nimeksi mongo ID jotta tunnistetaan kuva + resepti
+Lue tele Katin linkki
+
+MUUTA: main.js rivi 25 -> ei single koska siellähän on useempi juttu
+
+Löydettiin bäkistä haavoittuvuus latauksista, korjattiin :)
+Mongolle reseptien lähetys onnistuu! Seuraavaks pitäs saada ladattua ne takas
+bäkille -> frontille repesti sivulle.
+Ja sit kuvan tallennus
+
+-
+
+TUNTI 22.4.
+
+Tehtiin State muuttujat lomakkeen joka kohdalle. 
+Frontista tehdään post pyyntö bäkille, joka saa reseptin tiedot oliona. 
+
+
+-
+
+Projektitunti 10.4.
+Lisättiin backendiin multerin avulla upload kuvan lataus käsittely
+Alotettiin "kuvanlisäys" nappia fronttiin ja upload napin rakennusta
+
+Sitten alettiin tehdä tietokantaa from tekstisisältöä varten. Tallennetaan MONGODB form tiedot ja 
+kuvan osoite. Käytetään osoitetta "reseptit" sivulla, mutta itse kuvatiedostot tallennetaan paikallisesti backendiin tällä hetkellä.
+
+
+-
+
+Projektitunti 3.4.
+
+Lisättiin lomake ja nappuloita
+Tutkittiin kuvien tallennusta
+
+
+-
+
+Projektitunti 1.4.
+
+Hyvin meni! :-) 
+Opettajat ja chatgpt autto paljon
+
+
+-
+
+
+Palaveri 29.3. KYSYMYKSET, APUA:
+- Saadaanko taustakuva ja fontit pelkän CSS avulla, että tarviiko ollenkaan HTML tiedostoa!?
+
+
+Aloituspalaveri 25.3.
+
+Projektin aihe: Reseptikirja opiskelijahintaisille budjettilounaille
+
+Mahdollisuudet:
+    - Selattava lisanäkymä kaikista
+    - Filter nimen mukaan, esim "kala"
+    - Avata yksittäinen resepti omaan näkymään. Siitä ainesosat, vaiheet ja kuva
+    - Lisätä uusia reseptejä tietokantaan
+    - Poistaa resepti (varmistus POP up, ehkä salasanalla)
+    - Muokata reseptejä
+
+Tavoitteet:
+    - Nettiin ja kavereille jakoon
+
+Aikataulu:
+    - Ennen vappua
+
+
+- 
+
+NÄKYMÄT 
+a) Alotusnkäymä. Siisti ruokakuva ja otsikko.
+
+SLIDEEMÄLLÄ
+b) Lista resepteistä (tiivistetty, nimi + kuva + hinta + aika-arvio tms)
+
+PAINAMALLA NIMEÄ
+c) Yksittäinen resepti (tarvikkeet, ohjeet, arvostelut / tähtimäärä)
+
+PAINA TAKAISIN -> listanäkymä
+
+- 
+
+FRAMEWORK
+React 
+
+-
+
+KOMPONENTTIKIRJASTO
+Alustavaks bootstrap
+
+-
+
+ENDPOINTS 
+/reseptit
+/reseptit/[id]
+
+-
+
+TIETOKANTA
+MongoDB / JOKU MUU, toho ei saa kuvia
+
+
+-
+
+
+
+MITEN TEET OMAN SIVUN KUN ET ENÄÄ MUISTA MITEN TÄÄ TEHTIIN:
+
+1. GIT projekti (gitlab / github)
+2. Omalle koneelle clone [repositoryn-osote]
+3. Tehdään projektista VITE + REACT [ npm create vite@latest part1 -- --template react ]
+4. Komponenttikirjasto, esim BOOTSTRAP
+5. ROUTER -> saat erillisiä sivuja "/koti", "/koti/kuvat"
+6. EXPRESS, "react bäkendille"
+7. CORS, tietoturva
+8. MULTER, backendiin kuvien latausta varten
+9. MONGOOSE, jotta päästään käsiks MONDB
+10. DOTENV, jotta voidaan lukee .env tiedosto, mm. mongo url ja salasana, ei pakollinen
+11. AXIOS kirjasto, get ja post pyynnöille, jotta ne latautuvat asynkronisesti. Sivu ei jää     odottamaan kaiken latautumista
+
+
+Git -> Vite + React -> Bootstrap etc -> Router -> Express -> Cors -> Multer -> Mongoose -> (dotenv) -> Axios
